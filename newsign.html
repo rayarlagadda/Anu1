@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 10%;
+}
+
+img { 
+  border: 3px solid Yellow; 
+} 
+img:hover { 
+  border: 3px solid Red; 
+} 
+img.selected{
+   border: 3px solid Red; 
+}
+
+input[type=text],input[type=password], input[type=tel],input[type=date],input[type=email],select, textarea{
+  width: 100%;
+  padding: 12px;
+   border-radius: 25px;
+    border: 2px solid #fff;
+  resize: vertical;
+}
+
+/* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 2px solid #f00;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+input[type=button] {
+  background-color: #f44336;
+  color: white;
+  padding: 12px 20px;
+  border: 1px;
+  border-radius: 12px;
+  cursor: pointer;
+  float: right;
+  width:250px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  float: right;
+  width:250px;
+}
+
+form {
+display:inline; 
+margin:10px;
+padding:10px;
+width: 500px;
+color:white;
+}
+
+input[type=submit]:hover {
+  background-color: #008000;
+}
+
+input[type=button]:hover {
+  background-color: #FF0000;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #1c2e4a;
+    padding: 20px;
+    top: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: right;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75,input[type=submit],input[type=button] {
+    width: 50%;
+    margin-top: 0;
+  }
+}
+</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+$('img').on('click', function(){
+    $('img').removeClass('selected');
+    $(this).addClass('selected');
+});
+</script>
+
+<div class="container">
+<h2 style="color:white"align="center">Sign Up</h2>
+  <form action="/action_page.php">
+   <p style="color:white"align="center"> WHO ARE YOU...?</p>
+   <div class="imgcontainer">
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  </style>
+  </head>
+  <body>
+  
+    <style>
+      img {
+        border-radius: 50%;
+      }
+      </style>
+      </head>
+      <body>
+       
+   
+      <img src="parent.png" alt="Avatar" style="width:100px">
+      
+     
+      <img src="student.png" alt="Avatar" style="width:100px">
+      
+      <img src="mentor.png" alt="Avatar" style="width:100px">
+     
+     
+      
+  </body>
+
+
+
+   </div>
+    <div class="row">
+      <div class="col-50">
+        <input type="text" id="fname" name="firstname" placeholder=" First Name.." value="" required>
+      </div>
+    </div>
+<br>
+    <div class="row">
+      
+      <div class="col-50">
+        <input type="text" id="lname" name="lastname" placeholder=" last Name.."  value="" required>
+      </div>
+    </div>
+<br>
+
+
+
+    <div class="row">
+      
+      <div class="col-50">
+        <input type="date" id="bdate" name="Birthdate" placeholder="Birthdate" required>
+      </div>
+    </div>
+<br>
+    <div class="row">
+	
+        
+        <div class="col-50">
+        <input type="email" id="mail" name="email" placeholder=" Email Please.." value="" required>
+        </div>
+    </div>    
+<br>
+     <div class="row">
+	
+        <div class="col-50">
+        <input type="tel" id="mobile" name="mobile" placeholder=" Mobile Number.." value="" required>
+        </div>
+     </div>
+
+<br>
+     <div class="row">
+      
+      <div class="col-50">
+        <input type="text" id="uname" name="username" placeholder="Username Enter atleast 6 Character.."  value="" required>
+      </div>
+    </div>          
+<br>
+     <div class="row">
+	
+
+        <div class="col-50">
+        <input type="password" id="pword" name="password" placeholder="  Password.." value="" required>
+        </div>
+     </div>
+ <br>
+     <div class="row">
+	
+
+        <div class="col-50">
+        <input type="password" id="cpword" name="cpassword" placeholder=" Confirm Password.." value="" required>
+        </div>
+     </div>
+
+      
+<script>
+$(function() {
+    $('input[name="signupas"]').on('click', function() {
+        if ($(this).val() == 'Student') {
+            $('#SchoolName').show();
+        }
+        else {
+            $('#SchoolName').hide();
+        }
+        if ($(this).val() == 'Gaurdian') {
+            $('#SUName').show();
+        }
+        else {
+            $('#SUName').hide();
+        }
+    });
+});
+</script>
+
+      <br>
+      
+     
+      <div id="SchoolName" hidden="true">
+      <div class="row">
+      
+      <div class="col-50">
+        <input type="text" id="Schoolname" name="Schoolname" placeholder="Your School name.."  required>
+      </div>
+    </div>
+    </div>
+
+    <div id="SUName" hidden="true">
+    <div class="row">
+     
+      <div class="col-50">
+        <input type="text" id="SUname" name="SUname" placeholder="Student username.." required>
+      </div>
+    </div>
+    </div>
+
+<br>
+
+     <div class="row">
+     
+      <div class="col-50">
+        <input type="text" id="city" name="city" placeholder=" City.." value="" required>
+      </div>
+    </div>
+
+<br>
+    <div class="row">
+      
+      <div class="col-50">
+        <select id="state" name="state">
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="West Bengal">West Bengal</option>
+          <option value="Bihar">Bihar</option>
+<option value="Delhi">Delhi</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Orissa">Orissa</option>
+<option value="Kerala">Kerala</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Assam">Assam</option>
+<option value="Punjab">Punjab</option>
+<option value="Haryana">Haryana</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Tripura">Tripura</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Manipur">Manipur</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Goa">Goa</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Sikkim">Sikkim</option>
+
+
+        </select>
+      </div>
+    </div>
+    
+ <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px ;color:white"> Remember me
+    </label>
+    
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="row">
+      <br>
+      
+<input type="button" value="Cancel">
+
+<input type="submit" value="Sign Up">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
